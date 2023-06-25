@@ -17,6 +17,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>GetUsersServlet</servlet-name>
-        <url-pattern>/getUser</url-pattern>
+        <url-pattern>/users</url-pattern>
     </servlet-mapping>
 </web-app>

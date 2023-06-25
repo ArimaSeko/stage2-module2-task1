@@ -1,6 +1,7 @@
 package com.example.servlet;
 
 import com.example.User;
+import com.example.Warehouse;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,13 +12,8 @@ import java.util.Set;
 public class GetUsersServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-        resp.setContentType("text/html");
-        PrintWriter pw = resp.getWriter();
-        pw.println("<html>");
-        pw.println("<h1> Hello, "+ "name" +"</h1>");
-        pw.println("</html>");
+        req.setAttribute("Users", Warehouse.getInstance().getUsers());
+        resp.sendRedirect("/jsp/users.jsp");
     }
     public void destroy() {
     }
