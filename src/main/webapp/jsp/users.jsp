@@ -22,7 +22,7 @@
         %>
         <br>
         <div>
-            <button class="w3-btn w3-green w3-round-large" onclick="location.href='/add'">Add User</button>
+            <button class="w3-btn w3-green w3-round-large" onclick="location.href='/jsp/add.jsp'">Add User</button>
         </div>
     </div>
 </div>
