@@ -11,7 +11,7 @@
     <div class="w3-container ">
         <h2 class="title w3-text-black">Users</h2>
         <%
-            Set<User> users = (Set<User>) request.getAttribute("users");
+            Set<User> users = (Set<User>) session.getAttribute("users");
             if (users != null && !users.isEmpty()) {
                 out.println("<ol>");
                 for (User user : users) {

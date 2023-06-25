@@ -13,7 +13,8 @@ import java.util.Set;
 public class GetUsersServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("Users", Warehouse.getInstance().getUsers());
+        HttpSession session = req.getSession();
+        session.setAttribute("users",Warehouse.getInstance().getUsers());
         resp.sendRedirect("/jsp/users.jsp");
     }
     public void destroy() {
