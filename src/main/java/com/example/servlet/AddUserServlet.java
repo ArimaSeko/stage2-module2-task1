@@ -3,12 +3,14 @@ package com.example.servlet;
 
 import com.example.User;
 import com.example.Warehouse;
+
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
 import java.io.PrintWriter;
-
+@WebServlet("/add")
 public class AddUserServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
